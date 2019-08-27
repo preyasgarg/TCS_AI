@@ -14,13 +14,14 @@ Original file is located at
 - Download the images from the link provided in the json file.
 - Save the images into appropriate directory
 """
-
+"""
+#this where json is read through drive
 from google.colab import drive
 drive.mount('/content/drive')
 
 !cp 'drive/My Drive/TCS_HUMAN_AIN/Face_Recognition.json' '.'
 !cp 'drive/My Drive/TCS_HUMAN_AIN/Indian_Number_plates.json' '.'
-
+"""
 import json
 data = []
 with open('Face_Recognition.json') as f:
@@ -48,7 +49,7 @@ for line in data:
 - Later in the final Implementation a better face detector will be used.
 """
 
-#instead of this mathias Detector, FaceNet will be used to acheive higher detecitons
+#instead of this mathias Detector, FaceNet will be used to acheive higher no. of detecitons
 
 import os
 import cv2
